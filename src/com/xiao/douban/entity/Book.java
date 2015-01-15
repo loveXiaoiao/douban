@@ -7,23 +7,23 @@ public class Book {
 	private int id;
 	private String title;
 	private String url;
-	private String imageUrl;
+	private String image;
 	private Images images;
-	private List<String> authors;
+	private List<String> author;
 	private List<String> translator;
 	private String publisher;
 	private String pubdate;//出版日期
 	private List<Tag> tags;//标签
 	private String binding;//封面
-	private float price;
+	private String price;
 	private Rate rating;//评分
 	private Series series;//系列
-	private int pages;
-	private String authorIntro;//作者信息
+	private String pages;
+	private String author_intro;//作者信息
 	private String summary;//总结
 	private String catalog;//序言
-	private String ebookUrl;
-	private float ebookPrice;
+	private String ebook_url;
+	private String ebook_price;
 	public int getId() {
 		return id;
 	}
@@ -42,11 +42,11 @@ public class Book {
 	public void setUrl(String url) {
 		this.url = url;
 	}
-	public String getImageUrl() {
-		return imageUrl;
+	public String getImage() {
+		return image;
 	}
-	public void setImageUrl(String imageUrl) {
-		this.imageUrl = imageUrl;
+	public void setImage(String image) {
+		this.image = image;
 	}
 	public Images getImages() {
 		return images;
@@ -54,11 +54,11 @@ public class Book {
 	public void setImages(Images images) {
 		this.images = images;
 	}
-	public List<String> getAuthors() {
-		return authors;
+	public List<String> getAuthor() {
+		return author;
 	}
-	public void setAuthors(List<String> authors) {
-		this.authors = authors;
+	public void setAuthor(List<String> author) {
+		this.author = author;
 	}
 	public List<String> getTranslator() {
 		return translator;
@@ -90,12 +90,6 @@ public class Book {
 	public void setBinding(String binding) {
 		this.binding = binding;
 	}
-	public float getPrice() {
-		return price;
-	}
-	public void setPrice(float price) {
-		this.price = price;
-	}
 	public Rate getRating() {
 		return rating;
 	}
@@ -108,17 +102,17 @@ public class Book {
 	public void setSeries(Series series) {
 		this.series = series;
 	}
-	public int getPages() {
-		return pages;
+	public String getAuthor_intro() {
+		return author_intro;
 	}
-	public void setPages(int pages) {
-		this.pages = pages;
+	public void setAuthor_intro(String author_intro) {
+		this.author_intro = author_intro;
 	}
-	public String getAuthorIntro() {
-		return authorIntro;
+	public String getPrice() {
+		return price;
 	}
-	public void setAuthorIntro(String authorIntro) {
-		this.authorIntro = authorIntro;
+	public void setPrice(String price) {
+		this.price = price;
 	}
 	public String getCatalog() {
 		return catalog;
@@ -126,23 +120,29 @@ public class Book {
 	public void setCatalog(String catalog) {
 		this.catalog = catalog;
 	}
-	public String getEbookUrl() {
-		return ebookUrl;
+	public String getPages() {
+		return pages;
 	}
-	public void setEbookUrl(String ebookUrl) {
-		this.ebookUrl = ebookUrl;
-	}
-	public float getEbookPrice() {
-		return ebookPrice;
-	}
-	public void setEbookPrice(float ebookPrice) {
-		this.ebookPrice = ebookPrice;
+	public void setPages(String pages) {
+		this.pages = pages;
 	}
 	public String getSummary() {
 		return summary;
 	}
 	public void setSummary(String summary) {
 		this.summary = summary;
+	}
+	public String getEbook_url() {
+		return ebook_url;
+	}
+	public void setEbook_url(String ebook_url) {
+		this.ebook_url = ebook_url;
+	}
+	public String getEbook_price() {
+		return ebook_price;
+	}
+	public void setEbook_price(String ebook_price) {
+		this.ebook_price = ebook_price;
 	}
 	
 	

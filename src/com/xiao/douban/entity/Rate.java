@@ -1,32 +1,32 @@
 package com.xiao.douban.entity;
 
 public class Rate {
-	private float max;//最高分
-	private long numRaters;//总评分人
-	private float average;//平均分
-	private float min;//最低分
-	public float getMax() {
+	private String max;//最高分
+	private String numRaters;//总评分人
+	private String average;//平均分
+	private String min;//最低分
+	public String getMax() {
 		return max;
 	}
-	public void setMax(float max) {
+	public void setMax(String max) {
 		this.max = max;
 	}
-	public long getNumRaters() {
+	public String getNumRaters() {
 		return numRaters;
 	}
-	public void setNumRaters(long numRaters) {
+	public void setNumRaters(String numRaters) {
 		this.numRaters = numRaters;
 	}
-	public float getAverage() {
+	public String getAverage() {
 		return average;
 	}
-	public void setAverage(float average) {
+	public void setAverage(String average) {
 		this.average = average;
 	}
-	public float getMin() {
+	public String getMin() {
 		return min;
 	}
-	public void setMin(float min) {
+	public void setMin(String min) {
 		this.min = min;
 	}
 	

@@ -1,26 +1,26 @@
 package com.xiao.douban.entity;
 
 public class Images {
-	private String smallUrl;
-	private String largeUrl;
+	private String small;
+	private String large;
 	private String medium;
-	public String getSmallUrl() {
-		return smallUrl;
-	}
-	public void setSmallUrl(String smallUrl) {
-		this.smallUrl = smallUrl;
-	}
-	public String getLargeUrl() {
-		return largeUrl;
-	}
-	public void setLargeUrl(String largeUrl) {
-		this.largeUrl = largeUrl;
-	}
 	public String getMedium() {
 		return medium;
 	}
 	public void setMedium(String medium) {
 		this.medium = medium;
+	}
+	public String getSmall() {
+		return small;
+	}
+	public void setSmall(String small) {
+		this.small = small;
+	}
+	public String getLarge() {
+		return large;
+	}
+	public void setLarge(String large) {
+		this.large = large;
 	}
 
 }
