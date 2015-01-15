@@ -9,6 +9,7 @@ import org.apache.http.client.ClientProtocolException;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -28,13 +29,13 @@ public class MainActivity extends Activity {
 	private ListView listView;
 	private Button searchBtn = null;// 搜索
 	private EditText mText = null;// 搜索条件
-	public String uriAPI = "https://api.douban.com/v2/book/search?q=python";
+	public String uriAPI = "https://api.douban.com/v2/book/search?q=";
 	private String resultStr = "";
 	List<Book> books = new ArrayList<Book>();
 	SearchBook searchBook = new SearchBook();
 	BookService bookService = new BookService();
 	ListViewAdapter adapter = new ListViewAdapter(MainActivity.this, books);
-	 private Handler handler=null;  
+	private Handler handler=null;  
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -60,10 +61,12 @@ public class MainActivity extends Activity {
 					try {
 						String mtext = mText.getText().toString();
 						if (mtext == null || "".equals(mtext)) {
+							Looper.prepare();     
 							Toast.makeText(MainActivity.this, "请输入查询参数！",Toast.LENGTH_SHORT).show();
+							Looper.loop();
 						} else {
-							resultStr = HttpUtil.initSSLAllWithHttpClient(uriAPI);
-							handler.post(runnableUi);   
+							resultStr = HttpUtil.initSSLAllWithHttpClient(uriAPI+mtext);
+							handler.post(runnableUi);
 						}
 					} catch (ClientProtocolException e) {
 						// TODO Auto-generated catch block
