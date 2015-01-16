@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.example.douban.R;
+import com.squareup.picasso.Picasso;
 import com.xiao.douban.entity.Book;
 
 import android.content.Context;
@@ -30,9 +31,12 @@ public class ListViewAdapter extends BaseAdapter {
 	}
 
 	@Override
-	public Object getItem(int arg0) {
-		// TODO Auto-generated method stub
-		return null;
+	public Book getItem(int arg0) {
+		if(books == null){
+			return null;
+		}else{
+			return books.get(arg0);
+		}
 	}
 
 	@Override
@@ -44,6 +48,7 @@ public class ListViewAdapter extends BaseAdapter {
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		ViewHolder holder = null;
+		
 		if (convertView == null) {
 			LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 			// 使用Vliew的对象itemView与R.layout.item关联
@@ -59,7 +64,8 @@ public class ListViewAdapter extends BaseAdapter {
 		Book book = books.get(position);
 		holder.title.setText(book.getTitle());
 		holder.publisher.setText(book.getPublisher());
-		holder.contactAvatar.setImageResource(R.drawable.ic_launcher);
+		Picasso.with(context).load(book.getImage()).into(holder.contactAvatar);
+//		holder.contactAvatar.setImageResource(R.drawable.ic_launcher);
 		return convertView;
 	}
 	

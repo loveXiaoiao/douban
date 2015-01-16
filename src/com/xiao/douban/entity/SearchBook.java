@@ -1,8 +1,13 @@
 package com.xiao.douban.entity;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class SearchBook {
+public class SearchBook implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6661424994292299682L;
 	private int start;
 	private int count;
 	private int	total;

@@ -7,18 +7,23 @@ import java.util.List;
 import org.apache.http.client.ClientProtocolException;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
+import android.widget.AdapterView.OnItemClickListener;
 
 import com.example.douban.R;
+import com.xiao.douban.activity.DetailInfo;
 import com.xiao.douban.entity.Book;
 import com.xiao.douban.entity.SearchBook;
 import com.xiao.douban.service.BookService;
@@ -49,6 +54,15 @@ public class MainActivity extends Activity {
 //		books = searchBook.getBooks();
 //		adapter = new ListViewAdapter(this, books);
 //		listView.setAdapter(adapter);
+		listView.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> adapterView, View view,
+					int position, long id) {
+				Intent dialIntent = new Intent(MainActivity.this, DetailInfo.class);
+				startActivity(dialIntent);
+			}
+		});
 	}
 
 	private OnClickListener mGetClickListener = new View.OnClickListener() {

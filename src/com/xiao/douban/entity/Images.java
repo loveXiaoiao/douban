@@ -1,6 +1,12 @@
 package com.xiao.douban.entity;
 
-public class Images {
+import java.io.Serializable;
+
+public class Images implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 7709118080119497554L;
 	private String small;
 	private String large;
 	private String medium;

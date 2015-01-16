@@ -1,9 +1,14 @@
 package com.xiao.douban.entity;
 
+import java.io.Serializable;
 import java.util.List;
 
 
-public class Book {
+public class Book implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6497332078343050517L;
 	private int id;
 	private String title;
 	private String url;

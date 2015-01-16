@@ -1,6 +1,12 @@
 package com.xiao.douban.entity;
 
-public class Tag {
+import java.io.Serializable;
+
+public class Tag implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5219928307471076795L;
 	private String count;
 	private String name;
 	public String getName() {

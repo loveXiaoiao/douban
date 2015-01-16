@@ -1,6 +1,12 @@
 package com.xiao.douban.entity;
 
-public class Rate {
+import java.io.Serializable;
+
+public class Rate implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7963512476806699836L;
 	private String max;//最高分
 	private String numRaters;//总评分人
 	private String average;//平均分

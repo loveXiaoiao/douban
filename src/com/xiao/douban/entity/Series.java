@@ -1,6 +1,12 @@
 package com.xiao.douban.entity;
 
-public class Series {
+import java.io.Serializable;
+
+public class Series implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -4019967794207666753L;
 	private int id;
 	private String title;
 	public int getId() {
